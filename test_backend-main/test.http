@@ -1,0 +1,9 @@
+
+### Create a new user with valid data
+POST http://localhost:8080/api/user/create
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
