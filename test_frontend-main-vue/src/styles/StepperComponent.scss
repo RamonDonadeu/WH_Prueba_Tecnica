@@ -1,0 +1,73 @@
+@import "./base.scss";
+
+    .stepper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: $light-green-color;
+        width: 100%;
+        min-height: 75px;
+        height: 75px;
+
+        .stepper_stepper_connector {
+            width: 60px;
+            height: 3px;
+            background-color: #788f9c;
+            transition: background-color 0.3s ease;
+
+            &--completed {
+                background-color: #07542a;
+            }
+        }
+        .stepper_stepper_itemContainer {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 100%;
+            width: 40vw;
+        }
+
+        .stepper_stepper_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: $white;
+            position: relative;
+            font-weight: bold;
+
+            .stepper_stepper_item_number {
+                border-radius: 50%;
+                height: 35px;
+                width: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $step-color;
+
+                &--completed {
+                    background-color: $dark-green-color;
+                }
+                &--current {
+
+                    background-color: $dark-green-color;
+                    height: 40px;
+                    width: 40px;
+                } 
+            }
+           
+        }
+
+        .stepper_stepper_item_arrow {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            bottom: -7.5px;
+            background-color: $light-green-color;
+            background-color: $white;
+            transform: rotate(45deg);
+        }
+    }
