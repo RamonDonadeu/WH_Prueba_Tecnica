@@ -24,6 +24,14 @@ export const createUser = async (req: Request, res: Response) => {
         user.username = username;
         user.password = hashPassword(password);
 
+        const existingUser = await userRepository.findOne({ where: { username: user.username } });
+        if (existingUser) {
+            return res.status(400).json({
+                status: 400,
+                message: "Username is already in use"
+            });
+        }
+
         await userRepository.save(user);
 
         return res.status(200).json({

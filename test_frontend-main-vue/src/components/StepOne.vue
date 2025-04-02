@@ -10,6 +10,8 @@
                 <input type="checkbox" id="checkbox" class="step_container_checkbox" v-model="checkboxValue" @change="$emit('checkbox-updated', checkboxValue)">
                 <label for="checkbox">Confirma que es mayor de edad, y acepta el tratamiento de sus datos según la política de protección de datos vigente.</label>
             </div>
+            
+            
         </div>
     </div>
 </template>
@@ -22,7 +24,6 @@ const checkboxValue = ref(false);
 </script>
 <style lang="scss" scoped>
 @import '../styles/base.scss';
-
 
 .step_container {
     display: flex;
@@ -62,6 +63,7 @@ const checkboxValue = ref(false);
     align-items: flex-start;
     gap: 0.5rem;
     margin-top: 1rem;    
+    cursor: pointer;
     
     input[type="checkbox"] {
         margin-top: 0.2rem;

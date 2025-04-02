@@ -20,7 +20,10 @@ export default defineConfigWithVueTs(
   },
 
   pluginVue.configs['flat/essential'],
+  pluginVue.configs['flat/recommended'],
+  pluginVue.configs['flat/strongly-recommended'],
   vueTsConfigs.recommended,
   ...oxlint.configs['flat/recommended'],
+  ...oxlint.configs['flat/typescript'],
   skipFormatting,
 )

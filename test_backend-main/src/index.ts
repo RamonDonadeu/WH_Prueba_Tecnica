@@ -2,9 +2,14 @@ import express from "express";
 import "reflect-metadata";
 import { DatabaseConnection } from "./typeORM/data-source.js";
 import userRoutes from "./routes/userRoutes.js";
+import cors from "cors";
 
 const app = express();
 const port = 8080;
+
+app.use(cors({
+  origin: '*'
+}));
 
 app.use(express.json());
 
